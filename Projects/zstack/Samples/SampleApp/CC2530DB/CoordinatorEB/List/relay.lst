@@ -1,0 +1,345 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         06/Apr/2016  19:10:13 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\Source\relay.c      #
+#    Command line       =  -f C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO        #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Desk #
+#                          top\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\Sample #
+#                          App\Source\relay.c -D ZTOOL_P1 -D xMT_TASK -D      #
+#                          xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                    #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\Administrator\Des #
+#                          ktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\CoordinatorEB\List\ -lA              #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\List\ --diag_suppress Pe001,Pa010 -o           #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\Obj\ -e --no_code_motion --debug --core=plain  #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\Administrator\Des #
+#                          ktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\ -I C:\Users\Administrator\Desktop\c #
+#                          ode\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\Source\ -I C:\Users\Administrator\Deskt #
+#                          op\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\target\CC2530EB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\high_level\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\ -I            #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\single_chip\   #
+#                          -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\mt\ -I                          #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\osal\include\ -I                   #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\saddr\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\sdata\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\af\ -I                       #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\nwk\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sapi\ -I                     #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sec\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sys\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\zdo\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\ -I                           #
+#                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\f8w\ -Ohz                     #
+#    List file          =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\List\relay.lst                                 #
+#    Object file        =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\Obj\relay.r51                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\Source\relay.c
+      1          #include "relay.h"
+                                  ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      3          void RelayInit(void)
+   \                     RelayInit:
+      4          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      5            P1DIR |= 0x04;     //P1_0å®šä¹‰ä¸ºè¾“å‡º
+   \   000000   43FE04       ORL     0xfe,#0x4
+      6            P1INP |= 0X04;     //æ‰“å¼€ä¸‹æ‹‰
+   \   000003   43F604       ORL     0xf6,#0x4
+      7            
+      8            P1DIR |= 0x08;     //P1_0å®šä¹‰ä¸ºè¾“å‡º
+   \   000006   43FE08       ORL     0xfe,#0x8
+      9            P1INP |= 0X08;     //æ‰“å¼€ä¸‹æ‹‰
+   \   000009   43F608       ORL     0xf6,#0x8
+     10          }
+   \   00000C   02....       LJMP    ?BRET
+   \   00000F                REQUIRE P1DIR
+   \   00000F                REQUIRE P1INP
+     11          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     12          void SetRelay1()
+   \                     SetRelay1:
+     13          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     14              RELAY1 = 0;
+   \   000000   C292         CLR     0x90.2
+     15          }
+   \   000002   02....       LJMP    ?BRET
+   \   000005                REQUIRE _A_P1
+     16          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     17          void ResetRelay1()
+   \                     ResetRelay1:
+     18          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     19              RELAY1 = 1;
+   \   000000   D292         SETB    0x90.2
+     20          }
+   \   000002   02....       LJMP    ?BRET
+   \   000005                REQUIRE _A_P1
+     21          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     22          void SetRelay2()
+   \                     SetRelay2:
+     23          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     24              RELAY2 = 0;
+   \   000000                REQUIRE ?Subroutine0
+   \   000000                REQUIRE _A_P1
+   \   000000                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   C293         CLR     0x90.3
+     25          }
+   \   000002   02....       LJMP    ?BRET
+     26          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     27          void ResetRelay2()
+   \                     ResetRelay2:
+     28          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     29              RELAY2 = 1;
+   \   000000                REQUIRE ?Subroutine1
+   \   000000                REQUIRE _A_P1
+   \   000000                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   D293         SETB    0x90.3
+     30          }
+   \   000002   02....       LJMP    ?BRET
+     31          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     32          void SetAllRelay()
+   \                     SetAllRelay:
+     33          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     34              RELAY1 = 0;
+   \   000000   C292         CLR     0x90.2
+     35              RELAY2 = 0;
+   \   000002   80..         SJMP    ?Subroutine0
+   \   000004                REQUIRE _A_P1
+     36          }
+     37          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     38          void ResetAllRelay()
+   \                     ResetAllRelay:
+     39          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     40              RELAY1 = 1;
+   \   000000   D292         SETB    0x90.2
+     41              RELAY2 = 1;
+   \   000002   80..         SJMP    ?Subroutine1
+   \   000004                REQUIRE _A_P1
+     42          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??RelayInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    RelayInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetRelay1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetRelay1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ResetRelay1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ResetRelay1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetRelay2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetRelay2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ResetRelay2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ResetRelay2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetAllRelay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetAllRelay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ResetAllRelay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ResetAllRelay
+
+   Maximum stack usage in bytes:
+
+     Function      ISTACK PSTACK XSTACK
+     --------      ------ ------ ------
+     RelayInit         0      0      0
+     ResetAllRelay     0      0      0
+     ResetRelay1       0      0      0
+     ResetRelay2       0      0      0
+     SetAllRelay       0      0      0
+     SetRelay1         0      0      0
+     SetRelay2         0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     _A_P1                    1
+     P1INP                    1
+     P1DIR                    1
+     RelayInit               15
+     SetRelay1                5
+     ResetRelay1              5
+     SetRelay2                0
+     ?Subroutine0             5
+     ResetRelay2              0
+     ?Subroutine1             5
+     SetAllRelay              4
+     ResetAllRelay            4
+     ??RelayInit?relay        6
+     ??SetRelay1?relay        6
+     ??ResetRelay1?relay      6
+     ??SetRelay2?relay        6
+     ??ResetRelay2?relay      6
+     ??SetAllRelay?relay      6
+     ??ResetAllRelay?relay    6
+
+ 
+ 43 bytes in segment BANKED_CODE
+ 42 bytes in segment BANK_RELAYS
+  3 bytes in segment SFR_AN
+ 
+ 85 bytes of CODE memory
+  0 bytes of DATA memory (+ 3 bytes shared)
+
+Errors: none
+Warnings: 1

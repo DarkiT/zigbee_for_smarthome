@@ -1,0 +1,554 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        01/May/2016  09:13:23 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\Source\pwm.c      /
+//    Command line       =  -f C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã /
+//                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\.. /
+//                          \..\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ       /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f         /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO        /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFF00                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Des /
+//                          ktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\Samp /
+//                          leApp\Source\pwm.c -D NWK_AUTO_POLL -D ZTOOL_P1   /
+//                          -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D    /
+//                          LCD_SUPPORTED=DEBUG -lC                           /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\EndDevic /
+//                          eEB\List\ -lA C:\Users\Administrator\Desktop\code /
+//                          \ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\CC2 /
+//                          530DB\EndDeviceEB\List\ --diag_suppress           /
+//                          Pe001,Pa010 -o C:\Users\Administrator\Desktop\cod /
+//                          e\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\CC /
+//                          2530DB\EndDeviceEB\Obj\ -e --no_code_motion       /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã /
+//                          \Projects\zstack\Samples\SampleApp\CC2530DB\ -I   /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\Sourc /
+//                          e\ -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½ /
+//                          Úµã\Projects\zstack\Samples\SampleApp\CC2530DB\.. /
+//                          \..\..\ZMain\TI2530DB\ -I                         /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\hal\include\ -I                 /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\hal\target\CC2530EB\ -I         /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mac\include\ -I                 /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mac\high_level\ -I              /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mac\low_level\srf04\ -I         /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mac\low_level\srf04\single_chip /
+//                          \ -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Ú /
+//                          µã\Projects\zstack\Samples\SampleApp\CC2530DB\..\ /
+//                          ..\..\..\..\Components\mt\ -I                     /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\osal\include\ -I                /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\services\saddr\ -I              /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\services\sdata\ -I              /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\af\ -I                    /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\nwk\ -I                   /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\sapi\ -I                  /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\sec\ -I                   /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\sys\ -I                   /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\stack\zdo\ -I                   /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\zmac\ -I                        /
+//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\zmac\f8w\ -Ohz                  /
+//    List file          =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\EndDevic /
+//                          eEB\List\pwm.s51                                  /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME pwm
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+
+        PUBLIC ??GpioCarrConfig?relay
+        FUNCTION ??GpioCarrConfig?relay,0203H
+        PUBLIC ??Gpio_Init?relay
+        FUNCTION ??Gpio_Init?relay,0203H
+        PUBLIC ??Pwm_Init?relay
+        FUNCTION ??Pwm_Init?relay,0203H
+        PUBLIC ??Timer_Init?relay
+        FUNCTION ??Timer_Init?relay,0203H
+        PUBLIC GpioCarrConfig
+        FUNCTION GpioCarrConfig,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC Gpio_Init
+        FUNCTION Gpio_Init,0201H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBWEAK P1DIR
+        PUBWEAK P1SEL
+        PUBWEAK P2SEL
+        PUBWEAK PERCFG
+        PUBLIC Pwm_Init
+        FUNCTION Pwm_Init,021201H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBWEAK T3CC0
+        PUBWEAK T3CC1
+        PUBWEAK T3CCTL0
+        PUBWEAK T3CCTL1
+        PUBWEAK T3CTL
+        PUBLIC Timer_Init
+        FUNCTION Timer_Init,0201H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBWEAK _A_P1
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+GpioCarrConfig      SYMBOL "GpioCarrConfig"
+??GpioCarrConfig?relay SYMBOL "?relay", GpioCarrConfig
+Gpio_Init           SYMBOL "Gpio_Init"
+??Gpio_Init?relay   SYMBOL "?relay", Gpio_Init
+Pwm_Init            SYMBOL "Pwm_Init"
+??Pwm_Init?relay    SYMBOL "?relay", Pwm_Init
+Timer_Init          SYMBOL "Timer_Init"
+??Timer_Init?relay  SYMBOL "?relay", Timer_Init
+
+// C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\Source\pwm.c
+//    1 #include "pwm.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0cbH
+// unsigned char volatile __sfr T3CTL
+T3CTL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0ccH
+// unsigned char volatile __sfr T3CCTL0
+T3CCTL0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0cdH
+// unsigned char volatile __sfr T3CC0
+T3CC0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0ceH
+// unsigned char volatile __sfr T3CCTL1
+T3CCTL1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0cfH
+// unsigned char volatile __sfr T3CC1
+T3CC1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f1H
+// unsigned char volatile __sfr PERCFG
+PERCFG:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f4H
+// unsigned char volatile __sfr P1SEL
+P1SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f5H
+// unsigned char volatile __sfr P2SEL
+P2SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0feH
+// unsigned char volatile __sfr P1DIR
+P1DIR:
+        DATA8
+        DS 1
+//    2 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//    3 void Gpio_Init()
+Gpio_Init:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function Gpio_Init
+        CODE
+//    4 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//    5   P1SEL &=~0x80;
+        ANL     0xf4,#0x7f
+//    6   P1DIR |= 0x80;
+        ORL     0xfe,#0x80
+//    7   P1_7 = 0;
+        CLR     0x90.7
+//    8 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock0
+        REQUIRE P1SEL
+        REQUIRE P1DIR
+        REQUIRE _A_P1
+//    9 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   10 void Timer_Init()
+Timer_Init:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function Timer_Init
+        CODE
+//   11 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   12   PERCFG |= 0x20;
+        ORL     0xf1,#0x20
+//   13   P2SEL |= 0x20;
+        ORL     0xf5,#0x20
+//   14   
+//   15   T3CCTL1 = 0;
+        MOV     0xce,#0x0
+//   16   
+//   17   T3CCTL0 = 0x10 |0x04;
+        MOV     0xcc,#0x14
+//   18   T3CC0 = 254;
+        MOV     0xcd,#-0x2
+//   19   T3CCTL1 = 0x18 | 0x04;
+        MOV     0xce,#0x1c
+//   20   T3CC1 = 1;
+        MOV     0xcf,#0x1
+//   21   T3CTL = 0xA0 | 0x10 | 0x02;
+        MOV     0xcb,#-0x4e
+//   22 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
+        REQUIRE PERCFG
+        REQUIRE P2SEL
+        REQUIRE T3CCTL1
+        REQUIRE T3CCTL0
+        REQUIRE T3CC0
+        REQUIRE T3CC1
+        REQUIRE T3CTL
+//   23 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   24 void Pwm_Init()
+Pwm_Init:
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI Function Pwm_Init
+        CODE
+//   25 {
+        FUNCALL Pwm_Init, Gpio_Init
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Pwm_Init, Timer_Init
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   26   Gpio_Init();
+        ; Setup parameters for call to function Gpio_Init
+        LCALL   ??Gpio_Init?relay
+//   27   Timer_Init();
+        ; Setup parameters for call to function Timer_Init
+        LCALL   ??Timer_Init?relay
+//   28 }
+        POP     DPH
+        CFI DPH0 SameValue
+        CFI CFA_SP SP+-4
+        POP     DPL
+        CFI DPL0 SameValue
+        CFI CFA_SP SP+-3
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock2
+//   29 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   30 void GpioCarrConfig( unsigned char carr1)
+GpioCarrConfig:
+        CFI Block cfiBlock3 Using cfiCommon0
+        CFI Function GpioCarrConfig
+        CODE
+//   31 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   32   unsigned char carr;
+//   33   
+//   34   carr = ~carr1;
+        MOV     A,R1
+        CPL     A
+        MOV     R0,A
+//   35   GPIOCLOSEPWM();
+        ANL     0xf4,#0x7f
+        CLR     0x90.7
+//   36   if(carr>0)
+        JZ      ??GpioCarrConfig_0
+//   37   {
+//   38     T3CC1 = carr;
+        MOV     0xcf,R0
+        SJMP    ??GpioCarrConfig_1
+//   39   }
+//   40   else
+//   41   {
+//   42     T3CC1 = 1;
+??GpioCarrConfig_0:
+        MOV     0xcf,#0x1
+//   43   }
+//   44   GPIOPWM();
+??GpioCarrConfig_1:
+        ORL     0xf4,#0x80
+//   45 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock3
+        REQUIRE P1SEL
+        REQUIRE _A_P1
+        REQUIRE T3CC1
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Gpio_Init?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Gpio_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Timer_Init?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Timer_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Pwm_Init?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Pwm_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??GpioCarrConfig?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    GpioCarrConfig
+
+        END
+//   46 
+//   47 
+//   48 // void main()
+//   49 // {
+//   50 //   unsigned char duty;
+//   51 //    Gpio_Init();
+//   52 //    Timer_Init();
+//   53 //    while(1)
+//   54 //    {
+//   55 //    GpioCarrConfig( duty);
+//   56 //    delay(10);
+//   57 //    duty++;
+//   58 //    }
+//   59 // }
+//   60 
+// 
+// 78 bytes in segment BANKED_CODE
+// 24 bytes in segment BANK_RELAYS
+// 10 bytes in segment SFR_AN
+// 
+// 102 bytes of CODE memory
+//   0 bytes of DATA memory (+ 10 bytes shared)
+//
+//Errors: none
+//Warnings: 1

@@ -1,0 +1,378 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         01/May/2016  09:13:23 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\Source\pwm.c        #
+#    Command line       =  -f C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Desk #
+#                          top\code\整合2\节点\Projects\zstack\Samples\Sample #
+#                          App\Source\pwm.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D   #
+#                          xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D        #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\EndDeviceEB\List\ -lA                #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\List\ --diag_suppress Pe001,Pa010 -o             #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\Obj\ -e --no_code_motion --debug --core=plain    #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\ -I C:\Users\Administrator\Desktop\c #
+#                          ode\整合2\节点\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\Source\ -I C:\Users\Administrator\Deskt #
+#                          op\code\整合2\节点\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\target\CC2530EB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\high_level\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\single_chip\   #
+#                          -I C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\mt\ -I                          #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\osal\include\ -I                   #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\saddr\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\sdata\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\af\ -I                       #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\nwk\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sapi\ -I                     #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sec\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sys\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\zdo\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\ -I                           #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\f8w\ -Ohz                     #
+#    List file          =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\List\pwm.lst                                     #
+#    Object file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\Obj\pwm.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp\Source\pwm.c
+      1          #include "pwm.h"
+                                ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xcb
+   \   unsigned char volatile __sfr T3CTL
+   \                     T3CTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xcc
+   \   unsigned char volatile __sfr T3CCTL0
+   \                     T3CCTL0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xcd
+   \   unsigned char volatile __sfr T3CC0
+   \                     T3CC0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xce
+   \   unsigned char volatile __sfr T3CCTL1
+   \                     T3CCTL1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xcf
+   \   unsigned char volatile __sfr T3CC1
+   \                     T3CC1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr PERCFG
+   \                     PERCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf5
+   \   unsigned char volatile __sfr P2SEL
+   \                     P2SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      3          void Gpio_Init()
+   \                     Gpio_Init:
+      4          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      5            P1SEL &=~0x80;
+   \   000000   53F47F       ANL     0xf4,#0x7f
+      6            P1DIR |= 0x80;
+   \   000003   43FE80       ORL     0xfe,#0x80
+      7            P1_7 = 0;
+   \   000006   C297         CLR     0x90.7
+      8          }
+   \   000008   02....       LJMP    ?BRET
+   \   00000B                REQUIRE P1SEL
+   \   00000B                REQUIRE P1DIR
+   \   00000B                REQUIRE _A_P1
+      9          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     10          void Timer_Init()
+   \                     Timer_Init:
+     11          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     12            PERCFG |= 0x20;
+   \   000000   43F120       ORL     0xf1,#0x20
+     13            P2SEL |= 0x20;
+   \   000003   43F520       ORL     0xf5,#0x20
+     14            
+     15            T3CCTL1 = 0;
+   \   000006   75CE00       MOV     0xce,#0x0
+     16            
+     17            T3CCTL0 = 0x10 |0x04;
+   \   000009   75CC14       MOV     0xcc,#0x14
+     18            T3CC0 = 254;
+   \   00000C   75CDFE       MOV     0xcd,#-0x2
+     19            T3CCTL1 = 0x18 | 0x04;
+   \   00000F   75CE1C       MOV     0xce,#0x1c
+     20            T3CC1 = 1;
+   \   000012   75CF01       MOV     0xcf,#0x1
+     21            T3CTL = 0xA0 | 0x10 | 0x02;
+   \   000015   75CBB2       MOV     0xcb,#-0x4e
+     22          }
+   \   000018   02....       LJMP    ?BRET
+   \   00001B                REQUIRE PERCFG
+   \   00001B                REQUIRE P2SEL
+   \   00001B                REQUIRE T3CCTL1
+   \   00001B                REQUIRE T3CCTL0
+   \   00001B                REQUIRE T3CC0
+   \   00001B                REQUIRE T3CC1
+   \   00001B                REQUIRE T3CTL
+     23          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     24          void Pwm_Init()
+   \                     Pwm_Init:
+     25          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     26            Gpio_Init();
+   \   000004                ; Setup parameters for call to function Gpio_Init
+   \   000004   12....       LCALL   ??Gpio_Init?relay
+     27            Timer_Init();
+   \   000007                ; Setup parameters for call to function Timer_Init
+   \   000007   12....       LCALL   ??Timer_Init?relay
+     28          }
+   \   00000A   D083         POP     DPH
+   \   00000C   D082         POP     DPL
+   \   00000E   02....       LJMP    ?BRET
+     29          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     30          void GpioCarrConfig( unsigned char carr1)
+   \                     GpioCarrConfig:
+     31          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     32            unsigned char carr;
+     33            
+     34            carr = ~carr1;
+   \   000000   E9           MOV     A,R1
+   \   000001   F4           CPL     A
+   \   000002   F8           MOV     R0,A
+     35            GPIOCLOSEPWM();
+   \   000003   53F47F       ANL     0xf4,#0x7f
+   \   000006   C297         CLR     0x90.7
+     36            if(carr>0)
+   \   000008   6004         JZ      ??GpioCarrConfig_0
+     37            {
+     38              T3CC1 = carr;
+   \   00000A   88CF         MOV     0xcf,R0
+   \   00000C   8003         SJMP    ??GpioCarrConfig_1
+     39            }
+     40            else
+     41            {
+     42              T3CC1 = 1;
+   \                     ??GpioCarrConfig_0:
+   \   00000E   75CF01       MOV     0xcf,#0x1
+     43            }
+     44            GPIOPWM();
+   \                     ??GpioCarrConfig_1:
+   \   000011   43F480       ORL     0xf4,#0x80
+     45          }
+   \   000014   02....       LJMP    ?BRET
+   \   000017                REQUIRE P1SEL
+   \   000017                REQUIRE _A_P1
+   \   000017                REQUIRE T3CC1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Gpio_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Gpio_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Timer_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Timer_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Pwm_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Pwm_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GpioCarrConfig?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GpioCarrConfig
+     46          
+     47          
+     48          // void main()
+     49          // {
+     50          //   unsigned char duty;
+     51          //    Gpio_Init();
+     52          //    Timer_Init();
+     53          //    while(1)
+     54          //    {
+     55          //    GpioCarrConfig( duty);
+     56          //    delay(10);
+     57          //    duty++;
+     58          //    }
+     59          // }
+     60          
+
+   Maximum stack usage in bytes:
+
+     Function        ISTACK PSTACK XSTACK
+     --------        ------ ------ ------
+     GpioCarrConfig      0      0      0
+     Gpio_Init           0      0      0
+     Pwm_Init            2      0      0
+       -> Gpio_Init      4      0      0
+       -> Timer_Init     4      0      0
+     Timer_Init          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label         Bytes
+     --------------         -----
+     _A_P1                     1
+     T3CTL                     1
+     T3CCTL0                   1
+     T3CC0                     1
+     T3CCTL1                   1
+     T3CC1                     1
+     PERCFG                    1
+     P1SEL                     1
+     P2SEL                     1
+     P1DIR                     1
+     Gpio_Init                11
+     Timer_Init               27
+     Pwm_Init                 17
+     GpioCarrConfig           23
+     ??Gpio_Init?relay         6
+     ??Timer_Init?relay        6
+     ??Pwm_Init?relay          6
+     ??GpioCarrConfig?relay    6
+
+ 
+ 78 bytes in segment BANKED_CODE
+ 24 bytes in segment BANK_RELAYS
+ 10 bytes in segment SFR_AN
+ 
+ 102 bytes of CODE memory
+   0 bytes of DATA memory (+ 10 bytes shared)
+
+Errors: none
+Warnings: 1

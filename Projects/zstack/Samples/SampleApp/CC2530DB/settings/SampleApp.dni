@@ -1,0 +1,38 @@
+[DebugChecksum]
+Checksum=888064778
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+A0=_ "E:\毕业设计\8、串口透传-打造无线串口模块\Components\osal\mcu\cc2530\OSAL_Nv.c" ""
+A1=_ "E:\毕业设计\8、串口透传-打造无线串口模块\Components\zmac\f8w\zmac.c" ""
+A2=_ "E:\毕业设计\code\节点\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
+A3=_ "E:\毕业设计\code\节点\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=4
+SuppressDialog=1

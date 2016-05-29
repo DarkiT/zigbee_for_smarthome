@@ -1,0 +1,222 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         01/May/2016  09:13:24 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\Source\adc.c        #
+#    Command line       =  -f C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Desk #
+#                          top\code\整合2\节点\Projects\zstack\Samples\Sample #
+#                          App\Source\adc.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D   #
+#                          xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D        #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\EndDeviceEB\List\ -lA                #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\List\ --diag_suppress Pe001,Pa010 -o             #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\Obj\ -e --no_code_motion --debug --core=plain    #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\ -I C:\Users\Administrator\Desktop\c #
+#                          ode\整合2\节点\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\Source\ -I C:\Users\Administrator\Deskt #
+#                          op\code\整合2\节点\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\target\CC2530EB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\high_level\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\single_chip\   #
+#                          -I C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\mt\ -I                          #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\osal\include\ -I                   #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\saddr\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\sdata\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\af\ -I                       #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\nwk\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sapi\ -I                     #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sec\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sys\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\zdo\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\ -I                           #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\f8w\ -Ohz                     #
+#    List file          =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\List\adc.lst                                     #
+#    Object file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
+#                          B\Obj\adc.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp\Source\adc.c
+      1          #include "adc.h"
+                                ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
+      2          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      3          void AdcInit()
+   \                     AdcInit:
+      4          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+      5             HalAdcSetReference(HAL_ADC_REF_AVDD);
+   \   000004                ; Setup parameters for call to function HalAdcSetReference
+   \   000004   7980         MOV     R1,#-0x80
+   \   000006   12....       LCALL   ??HalAdcSetReference?relay
+      6             HalAdcInit ();
+   \   000009                ; Setup parameters for call to function HalAdcInit
+   \   000009   12....       LCALL   ??HalAdcInit?relay
+      7          }
+   \   00000C                REQUIRE ?Subroutine0
+   \   00000C                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+      8          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      9          int ReadAd()
+   \                     ReadAd:
+     10          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     11            int v = 0;
+     12          
+     13            v = HalAdcRead ( HAL_ADC_CHN_AIN5, HAL_ADC_RESOLUTION_8 );
+     14          
+     15            return v;
+   \   000004                ; Setup parameters for call to function HalAdcRead
+   \   000004   7A01         MOV     R2,#0x1
+   \   000006   7905         MOV     R1,#0x5
+   \   000008   12....       LCALL   ??HalAdcRead?relay
+   \   00000B   80..         SJMP    ?Subroutine0
+     16          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??AdcInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    AdcInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??ReadAd?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ReadAd
+
+   Maximum stack usage in bytes:
+
+     Function                ISTACK PSTACK XSTACK
+     --------                ------ ------ ------
+     AdcInit                     2      0      0
+       -> HalAdcSetReference     4      0      0
+       -> HalAdcInit             4      0      0
+     ReadAd                      2      0      0
+       -> HalAdcRead             4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     AdcInit           12
+     ?Subroutine0       7
+     ReadAd            13
+     ??AdcInit?relay    6
+     ??ReadAd?relay     6
+
+ 
+ 32 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+ 
+ 44 bytes of CODE memory
+
+Errors: none
+Warnings: 1

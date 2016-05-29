@@ -1,0 +1,272 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         06/Apr/2016  19:10:13 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\Source\input.c      #
+#    Command line       =  -f C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO        #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Desk #
+#                          top\code\整合2\节点\Projects\zstack\Samples\Sample #
+#                          App\Source\input.c -D ZTOOL_P1 -D xMT_TASK -D      #
+#                          xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                    #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\CoordinatorEB\List\ -lA              #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\List\ --diag_suppress Pe001,Pa010 -o           #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\Obj\ -e --no_code_motion --debug --core=plain  #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\Administrator\Des #
+#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\ -I C:\Users\Administrator\Desktop\c #
+#                          ode\整合2\节点\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\Source\ -I C:\Users\Administrator\Deskt #
+#                          op\code\整合2\节点\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\hal\target\CC2530EB\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\include\ -I                    #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\high_level\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\ -I            #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\mac\low_level\srf04\single_chip\   #
+#                          -I C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\mt\ -I                          #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\osal\include\ -I                   #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\saddr\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\services\sdata\ -I                 #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\af\ -I                       #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\nwk\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sapi\ -I                     #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sec\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\sys\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\zdo\ -I                      #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\ -I                           #
+#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\zmac\f8w\ -Ohz                     #
+#    List file          =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\List\input.lst                                 #
+#    Object file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB\Obj\input.r51                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp\Source\input.c
+      1          #include "input.h"
+
+   \                                 In  segment SFR_AN, at 0x8f
+   \   unsigned char volatile __sfr P0INP
+   \                     P0INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      3          void InitGas()
+   \                     InitGas:
+      4          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      5            P1SEL &= ~0X08;     
+   \   000000   53F4F7       ANL     0xf4,#0xf7
+      6            P1DIR &= ~0X08;    
+   \   000003   53FEF7       ANL     0xfe,#0xf7
+      7            P1INP &= ~0x08;   
+   \   000006   53F6F7       ANL     0xf6,#0xf7
+      8          }
+   \   000009   02....       LJMP    ?BRET
+   \   00000C                REQUIRE P1SEL
+   \   00000C                REQUIRE P1DIR
+   \   00000C                REQUIRE P1INP
+      9          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     10          void InitRain()
+   \                     InitRain:
+     11          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     12              P1SEL &= ~0X04;    
+   \   000000   53F4FB       ANL     0xf4,#0xfb
+     13              P1DIR &= ~0X04;    
+   \   000003   53FEFB       ANL     0xfe,#0xfb
+     14              P1INP &= ~0x04;    
+   \   000006   53F6FB       ANL     0xf6,#0xfb
+     15          }
+   \   000009   02....       LJMP    ?BRET
+   \   00000C                REQUIRE P1SEL
+   \   00000C                REQUIRE P1DIR
+   \   00000C                REQUIRE P1INP
+     16          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     17          void InitFire()     
+   \                     InitFire:
+     18          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     19              P0SEL &= ~0X40;  
+   \   000000   53F3BF       ANL     0xf3,#0xbf
+     20              P0DIR &= ~0X40;   
+   \   000003   53FDBF       ANL     0xfd,#0xbf
+     21              P0INP &= ~0x40;    
+   \   000006   538FBF       ANL     0x8f,#0xbf
+     22          }
+   \   000009   02....       LJMP    ?BRET
+   \   00000C                REQUIRE P0SEL
+   \   00000C                REQUIRE P0DIR
+   \   00000C                REQUIRE P0INP
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitGas?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitGas
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitRain?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitRain
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitFire?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitFire
+
+   Maximum stack usage in bytes:
+
+     Function ISTACK PSTACK XSTACK
+     -------- ------ ------ ------
+     InitFire     0      0      0
+     InitGas      0      0      0
+     InitRain     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     P0INP               1
+     P0SEL               1
+     P1SEL               1
+     P1INP               1
+     P0DIR               1
+     P1DIR               1
+     InitGas            12
+     InitRain           12
+     InitFire           12
+     ??InitGas?relay     6
+     ??InitRain?relay    6
+     ??InitFire?relay    6
+
+ 
+ 36 bytes in segment BANKED_CODE
+ 18 bytes in segment BANK_RELAYS
+  6 bytes in segment SFR_AN
+ 
+ 54 bytes of CODE memory
+  0 bytes of DATA memory (+ 6 bytes shared)
+
+Errors: none
+Warnings: none
