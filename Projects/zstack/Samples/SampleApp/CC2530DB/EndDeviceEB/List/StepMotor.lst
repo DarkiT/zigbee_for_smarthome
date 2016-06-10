@@ -1,0 +1,361 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         30/May/2016  20:46:50 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\Source\StepMotor.c                     #
+#    Command line       =  -f E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8 #
+#                          wEndev.cfg (-DCPU32MHZ -DROOT=__near_func          #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO       #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\Source\StepMoto #
+#                          r.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK -D    #
+#                          xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                    #
+#                          LCD_SUPPORTED=DEBUG -lC E:\www\zigbee_for_smarthom #
+#                          e\Projects\zstack\Samples\SampleApp\CC2530DB\EndDe #
+#                          viceEB\List\ -lA E:\www\zigbee_for_smarthome\Proje #
+#                          cts\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\ #
+#                          List\ --diag_suppress Pe001,Pa010 -o               #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\ -e           #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\Source\ -I                 #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\hal #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\hal\target\CC2530EB\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\mac\high_level\ -I                       #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \low_level\srf04\ -I E:\www\zigbee_for_smarthome\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\low_level\srf04\single_chip\ #
+#                           -I E:\www\zigbee_for_smarthome\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mt\ -I E:\www\zigbee_for_smarthome\Projects\zstac #
+#                          k\Samples\SampleApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\osal\include\ -I E:\www\zigbee_for_smarthome\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\services\saddr\ -I              #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\ser #
+#                          vices\sdata\ -I E:\www\zigbee_for_smarthome\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\nwk\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\sapi\ -I E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\..\..\Components\stack\sec\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\sys\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\zdo\ -I E:\www\zigbee_for_smarthome\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\zma #
+#                          c\f8w\ -Ohz                                        #
+#    List file          =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\List\StepMotor.ls #
+#                          t                                                  #
+#    Object file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\StepMotor.r51 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\StepMotor.c
+      1          #include "StepMotor.h"
+                                      ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      3          void StepMotorInit(void)
+   \                     StepMotorInit:
+      4          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      5            P1DIR |= 0x04;     //P1_2定义为输出  1.2          0000 0100
+   \   000000   43FE04       ORL     0xfe,#0x4
+      6            P1INP |= 0X04;     //打开下拉        1.3          0000 1000
+   \   000003   43F604       ORL     0xf6,#0x4
+      7            P1DIR |= 0x08;     //P1_3定义为输出  1.4          0001 0000
+   \   000006   43FE08       ORL     0xfe,#0x8
+      8            P1INP |= 0X08;     //打开下拉        1.5          0010 0000
+   \   000009   43F608       ORL     0xf6,#0x8
+      9            P1DIR |= 0x10;     //P1_4定义为输出
+   \   00000C   43FE10       ORL     0xfe,#0x10
+     10            P1INP |= 0X10;     //打开下拉  
+   \   00000F   43F610       ORL     0xf6,#0x10
+     11            P1DIR |= 0x02;     //P1_5定义为输出
+   \   000012   43FE02       ORL     0xfe,#0x2
+     12            P1INP |= 0X02;     //打开下拉  
+   \   000015   43F602       ORL     0xf6,#0x2
+     13          }
+   \   000018   02....       LJMP    ?BRET
+   \   00001B                REQUIRE P1DIR
+   \   00001B                REQUIRE P1INP
+     14          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     15          void StepMotorTurn(int mode,int couter)
+   \                     StepMotorTurn:
+     16          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     17              switch(mode)
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+   \   000009   78..         MOV     R0,#?V0 + 0
+   \   00000B   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for StepMotorTurn>_0`:
+   \   00000E   0000         DW        0
+   \   000010   02           DB        2
+   \   000011   ....         DW        ??StepMotorTurn_0
+   \   000013   ....         DW        ??StepMotorTurn_1
+   \   000015   ....         DW        ??StepMotorTurn_2
+   \   000017   ....         DW        ??StepMotorTurn_3
+     18              {
+     19                  case 2:
+     20                  switch(couter)
+   \                     ??StepMotorTurn_3:
+   \   000019   8C..         MOV     ?V0 + 0,R4
+   \   00001B   8D..         MOV     ?V0 + 1,R5
+   \   00001D   78..         MOV     R0,#?V0 + 0
+   \   00001F   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for StepMotorTurn>_1`:
+   \   000022   0000         DW        0
+   \   000024   03           DB        3
+   \   000025   ....         DW        ??StepMotorTurn_0
+   \   000027   ....         DW        ??StepMotorTurn_4
+   \   000029   ....         DW        ??StepMotorTurn_5
+   \   00002B   ....         DW        ??StepMotorTurn_6
+   \   00002D   ....         DW        ??StepMotorTurn_7
+     21                  {
+     22                      case 0:
+     23                      IN1 = 1;
+   \                     ??StepMotorTurn_4:
+   \   00002F   D292         SETB    0x90.2
+     24                      IN2 = 1;
+   \   000031   D293         SETB    0x90.3
+     25                      IN3 = 0;
+   \   000033   C294         CLR     0x90.4
+     26                      IN4 = 0;
+   \                     ??StepMotorTurn_8:
+   \   000035   C291         CLR     0x90.1
+     27                      break;
+   \   000037   8034         SJMP    ??StepMotorTurn_0
+     28          
+     29                      case 1:
+     30                      IN1 = 0;
+   \                     ??StepMotorTurn_5:
+   \   000039   C292         CLR     0x90.2
+     31                      IN2 = 1;
+   \   00003B   D293         SETB    0x90.3
+     32                      IN3 = 1;
+   \   00003D   D294         SETB    0x90.4
+     33                      IN4 = 0;
+   \   00003F   80F4         SJMP    ??StepMotorTurn_8
+     34                      break;
+     35          
+     36                      case 2:
+     37                      IN1 = 0;
+   \                     ??StepMotorTurn_6:
+   \   000041   C292         CLR     0x90.2
+     38                      IN2 = 0;
+   \   000043   C293         CLR     0x90.3
+     39                      IN3 = 1;
+   \   000045   8022         SJMP    ??StepMotorTurn_9
+     40                      IN4 = 1;
+     41                      break;
+     42          
+     43                      case 3:
+     44                      IN1 = 1;
+     45                      IN2 = 0;
+     46                      IN3 = 0;
+     47                      IN4 = 1;
+     48                      break;
+     49                  }
+     50                  break;
+     51          
+     52                  case 1:
+     53                  switch(couter)
+   \                     ??StepMotorTurn_2:
+   \   000047   8C..         MOV     ?V0 + 0,R4
+   \   000049   8D..         MOV     ?V0 + 1,R5
+   \   00004B   78..         MOV     R0,#?V0 + 0
+   \   00004D   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for StepMotorTurn>_2`:
+   \   000050   0000         DW        0
+   \   000052   03           DB        3
+   \   000053   ....         DW        ??StepMotorTurn_0
+   \   000055   ....         DW        ??StepMotorTurn_7
+   \   000057   ....         DW        ??StepMotorTurn_6
+   \   000059   ....         DW        ??StepMotorTurn_5
+   \   00005B   ....         DW        ??StepMotorTurn_4
+   \                     ??StepMotorTurn_7:
+   \   00005D   D292         SETB    0x90.2
+   \   00005F   C293         CLR     0x90.3
+   \   000061   C294         CLR     0x90.4
+   \   000063   8006         SJMP    ??StepMotorTurn_10
+     54                  {
+     55                      case 0:
+     56                      IN1 = 1;
+     57                      IN2 = 0;
+     58                      IN3 = 0;
+     59                      IN4 = 1;
+     60                      break;
+     61          
+     62                      case 1:
+     63                      IN1 = 0;
+     64                      IN2 = 0;
+     65                      IN3 = 1;
+     66                      IN4 = 1;
+     67                      break;
+     68          
+     69                      case 2:
+     70                       IN1 = 0;
+     71                      IN2 = 1;
+     72                      IN3 = 1;
+     73                      IN4 = 0;
+     74                      break;
+     75          
+     76                      case 3:
+     77                      IN1 = 1;
+     78                      IN2 = 1;
+     79                      IN3 = 0;
+     80                      IN4 = 0;
+     81                      break;
+     82                  }
+     83                  break;
+     84          
+     85                  case 0:
+     86                  IN1 = 1;
+   \                     ??StepMotorTurn_1:
+   \   000065   D292         SETB    0x90.2
+     87                  IN2 = 1;
+   \   000067   D293         SETB    0x90.3
+     88                  IN3 = 1;
+   \                     ??StepMotorTurn_9:
+   \   000069   D294         SETB    0x90.4
+     89                  IN4 = 1;
+   \                     ??StepMotorTurn_10:
+   \   00006B   D291         SETB    0x90.1
+     90                  break;
+     91          
+     92              }
+     93          }
+   \                     ??StepMotorTurn_0:
+   \   00006D   7F02         MOV     R7,#0x2
+   \   00006F   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000072                REQUIRE _A_P1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??StepMotorInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    StepMotorInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??StepMotorTurn?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    StepMotorTurn
+
+   Maximum stack usage in bytes:
+
+     Function      ISTACK PSTACK XSTACK
+     --------      ------ ------ ------
+     StepMotorInit     0      0      0
+     StepMotorTurn     0      0     10
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     _A_P1                    1
+     P1INP                    1
+     P1DIR                    1
+     StepMotorInit           27
+     StepMotorTurn          114
+     ??StepMotorInit?relay    6
+     ??StepMotorTurn?relay    6
+
+ 
+ 141 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+   3 bytes in segment SFR_AN
+ 
+ 153 bytes of CODE memory
+   0 bytes of DATA memory (+ 3 bytes shared)
+
+Errors: none
+Warnings: 1

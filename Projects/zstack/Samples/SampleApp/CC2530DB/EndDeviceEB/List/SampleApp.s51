@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        03/May/2016  09:54:04 /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        31/May/2016  19:53:13 /
 // Copyright 2004-2011 IAR Systems AB.                                        /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,17 +9,15 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\Source\SampleApp. /
-//                          c                                                 /
-//    Command line       =  -f C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã /
-//                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\.. /
-//                          \..\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ       /
-//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
-//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f         /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO        /
+//    Source file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\Source\SampleApp.c                   /
+//    Command line       =  -f E:\www\zigbee_for_smarthome\Projects\zstack\Sa /
+//                          mples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\ /
+//                          f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func       /
+//                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6        /
+//                          -DMAC_CFG_RX_MAX=3) -f E:\www\zigbee_for_smarthom /
+//                          e\Projects\zstack\Samples\SampleApp\CC2530DB\..\. /
+//                          .\..\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO    /
 //                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
 //                          -DDEFAULT_CHANLIST=0x00000800                     /
 //                          -DZDAPP_CONFIG_PAN_ID=0xFF00                      /
@@ -42,87 +40,77 @@
 //                          __code" -DGENERIC=__generic                       /
 //                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Des /
-//                          ktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\Samp /
-//                          leApp\Source\SampleApp.c -D NWK_AUTO_POLL -D      /
-//                          ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D           /
-//                          xMT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC           /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\EndDevic /
-//                          eEB\List\ -lA C:\Users\Administrator\Desktop\code /
-//                          \ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\CC2 /
-//                          530DB\EndDeviceEB\List\ --diag_suppress           /
-//                          Pe001,Pa010 -o C:\Users\Administrator\Desktop\cod /
-//                          e\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\CC /
-//                          2530DB\EndDeviceEB\Obj\ -e --no_code_motion       /
-//                          --debug --core=plain --dptr=16,1                  /
-//                          --data_model=large --code_model=banked            /
-//                          --calling_convention=xdata_reentrant              /
-//                          --place_constants=data_rom --nr_virtual_regs 16   /
-//                          -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã /
-//                          \Projects\zstack\Samples\SampleApp\CC2530DB\ -I   /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\Sourc /
-//                          e\ -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½ /
-//                          Úµã\Projects\zstack\Samples\SampleApp\CC2530DB\.. /
-//                          \..\..\ZMain\TI2530DB\ -I                         /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\hal\include\ -I                 /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\hal\target\CC2530EB\ -I         /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\mac\include\ -I                 /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\mac\high_level\ -I              /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\mac\low_level\srf04\ -I         /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\mac\low_level\srf04\single_chip /
-//                          \ -I C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Ú /
-//                          µã\Projects\zstack\Samples\SampleApp\CC2530DB\..\ /
-//                          ..\..\..\..\Components\mt\ -I                     /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\osal\include\ -I                /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\services\saddr\ -I              /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\services\sdata\ -I              /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\af\ -I                    /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\nwk\ -I                   /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\sapi\ -I                  /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\sec\ -I                   /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\sys\ -I                   /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\stack\zdo\ -I                   /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\zmac\ -I                        /
-//                          C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
-//                          \..\..\Components\zmac\f8w\ -Ohz                  /
-//    List file          =  C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Pr /
-//                          ojects\zstack\Samples\SampleApp\CC2530DB\EndDevic /
-//                          eEB\List\SampleApp.s51                            /
+//                          -DREJOIN_POLL_RATE=440 E:\www\zigbee_for_smarthom /
+//                          e\Projects\zstack\Samples\SampleApp\Source\Sample /
+//                          App.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK    /
+//                          -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                /
+//                          LCD_SUPPORTED=DEBUG -lC                           /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\EndDeviceEB\List\ -lA       /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\EndDeviceEB\List\           /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\EndDeviceEB\Obj\ -e         /
+//                          --no_code_motion --debug --core=plain             /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\ -I                         /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\Source\ -I               /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\    /
+//                          -I E:\www\zigbee_for_smarthome\Projects\zstack\Sa /
+//                          mples\SampleApp\CC2530DB\..\..\..\..\..\Component /
+//                          s\hal\include\ -I E:\www\zigbee_for_smarthome\Pro /
+//                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\hal\target\CC2530EB\ -I          /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\m /
+//                          ac\include\ -I E:\www\zigbee_for_smarthome\Projec /
+//                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\ /
+//                          ..\Components\mac\high_level\ -I                  /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\m /
+//                          ac\low_level\srf04\ -I E:\www\zigbee_for_smarthom /
+//                          e\Projects\zstack\Samples\SampleApp\CC2530DB\..\. /
+//                          .\..\..\..\Components\mac\low_level\srf04\single_ /
+//                          chip\ -I E:\www\zigbee_for_smarthome\Projects\zst /
+//                          ack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com /
+//                          ponents\mt\ -I E:\www\zigbee_for_smarthome\Projec /
+//                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\ /
+//                          ..\Components\osal\include\ -I                    /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\s /
+//                          ervices\saddr\ -I E:\www\zigbee_for_smarthome\Pro /
+//                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ /
+//                          ..\..\Components\services\sdata\ -I               /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\s /
+//                          tack\af\ -I E:\www\zigbee_for_smarthome\Projects\ /
+//                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\ /
+//                          Components\stack\nwk\ -I                          /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\s /
+//                          tack\sapi\ -I E:\www\zigbee_for_smarthome\Project /
+//                          s\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. /
+//                          .\Components\stack\sec\ -I                        /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\s /
+//                          tack\sys\ -I E:\www\zigbee_for_smarthome\Projects /
+//                          \zstack\Samples\SampleApp\CC2530DB\..\..\..\..\.. /
+//                          \Components\stack\zdo\ -I                         /
+//                          E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\..\..\..\..\..\Components\z /
+//                          mac\ -I E:\www\zigbee_for_smarthome\Projects\zsta /
+//                          ck\Samples\SampleApp\CC2530DB\..\..\..\..\..\Comp /
+//                          onents\zmac\f8w\ -Ohz                             /
+//    List file          =  E:\www\zigbee_for_smarthome\Projects\zstack\Sampl /
+//                          es\SampleApp\CC2530DB\EndDeviceEB\List\SampleApp. /
+//                          s51                                               /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -442,10 +430,7 @@ MT_UartInit         SYMBOL "MT_UartInit"
 MT_UartRegisterTaskID SYMBOL "MT_UartRegisterTaskID"
 HalUARTWrite        SYMBOL "HalUARTWrite"
 AdcInit             SYMBOL "AdcInit"
-MotorInit           SYMBOL "MotorInit"
-StopMotor           SYMBOL "StopMotor"
-Pwm_Init            SYMBOL "Pwm_Init"
-GpioCarrConfig      SYMBOL "GpioCarrConfig"
+InitFire            SYMBOL "InitFire"
 afRegister          SYMBOL "afRegister"
 RegisterForKeys     SYMBOL "RegisterForKeys"
 osal_memcpy         SYMBOL "osal_memcpy"
@@ -457,8 +442,10 @@ osal_msg_deallocate SYMBOL "osal_msg_deallocate"
 osal_rand           SYMBOL "osal_rand"
 aps_FindGroup       SYMBOL "aps_FindGroup"
 aps_RemoveGroup     SYMBOL "aps_RemoveGroup"
+GpioCarrConfig      SYMBOL "GpioCarrConfig"
 TurnMotorLeft       SYMBOL "TurnMotorLeft"
 TurnMotorRight      SYMBOL "TurnMotorRight"
+StopMotor           SYMBOL "StopMotor"
 memset              SYMBOL "memset"
 AF_DataRequest      SYMBOL "AF_DataRequest"
 DHT11Read           SYMBOL "DHT11Read"
@@ -471,10 +458,9 @@ Single_Read_BH1750  SYMBOL "Single_Read_BH1750"
 ??GpioCarrConfig?relay SYMBOL "?relay", GpioCarrConfig
 ??HalLcdWriteString?relay SYMBOL "?relay", HalLcdWriteString
 ??HalUARTWrite?relay SYMBOL "?relay", HalUARTWrite
+??InitFire?relay    SYMBOL "?relay", InitFire
 ??MT_UartInit?relay SYMBOL "?relay", MT_UartInit
 ??MT_UartRegisterTaskID?relay SYMBOL "?relay", MT_UartRegisterTaskID
-??MotorInit?relay   SYMBOL "?relay", MotorInit
-??Pwm_Init?relay    SYMBOL "?relay", Pwm_Init
 ??ReadAd?relay      SYMBOL "?relay", ReadAd
 ??RegisterForKeys?relay SYMBOL "?relay", RegisterForKeys
 ??Single_Read_BH1750?relay SYMBOL "?relay", Single_Read_BH1750
@@ -547,32 +533,11 @@ WaterAutoControl    SYMBOL "WaterAutoControl"
         ARGFRAME XSTACK, 11, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN MotorInit
-        FUNCTION MotorInit,0200H
+        EXTERN InitFire
+        FUNCTION InitFire,0200H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 11, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN StopMotor
-        FUNCTION StopMotor,0200H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 32, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN Pwm_Init
-        FUNCTION Pwm_Init,0200H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 11, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN GpioCarrConfig
-        FUNCTION GpioCarrConfig,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 32, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN afRegister
@@ -652,6 +617,13 @@ WaterAutoControl    SYMBOL "WaterAutoControl"
         ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN GpioCarrConfig
+        FUNCTION GpioCarrConfig,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 32, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN TurnMotorLeft
         FUNCTION TurnMotorLeft,0200H
         ARGFRAME ISTACK, 0, STACK
@@ -661,6 +633,13 @@ WaterAutoControl    SYMBOL "WaterAutoControl"
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN TurnMotorRight
         FUNCTION TurnMotorRight,0200H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 32, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN StopMotor
+        FUNCTION StopMotor,0200H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 32, STACK
@@ -720,14 +699,12 @@ WaterAutoControl    SYMBOL "WaterAutoControl"
         FUNCTION ??HalLcdWriteString?relay,00H
         EXTERN ??HalUARTWrite?relay
         FUNCTION ??HalUARTWrite?relay,00H
+        EXTERN ??InitFire?relay
+        FUNCTION ??InitFire?relay,00H
         EXTERN ??MT_UartInit?relay
         FUNCTION ??MT_UartInit?relay,00H
         EXTERN ??MT_UartRegisterTaskID?relay
         FUNCTION ??MT_UartRegisterTaskID?relay,00H
-        EXTERN ??MotorInit?relay
-        FUNCTION ??MotorInit?relay,00H
-        EXTERN ??Pwm_Init?relay
-        FUNCTION ??Pwm_Init?relay,00H
         EXTERN ??ReadAd?relay
         FUNCTION ??ReadAd?relay,00H
         EXTERN ??RegisterForKeys?relay
@@ -768,7 +745,7 @@ WaterAutoControl    SYMBOL "WaterAutoControl"
         EXTERN wendu_ge
         EXTERN wendu_shi
 
-// C:\Users\Administrator\Desktop\code\ÕûºÏ2\½Úµã\Projects\zstack\Samples\SampleApp\Source\SampleApp.c
+// E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\SampleApp.c
 //    1 /*********************************************************************
 //    2   This application isn't intended to do anything useful, it is
 //    3   intended to be a simple example of an application's structure.
@@ -1121,28 +1098,6 @@ SampleApp_Init:
         ARGFRAME XSTACK, 11, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL SampleApp_Init, MotorInit
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 11, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 11, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL SampleApp_Init, StopMotor
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 11, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 11, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL SampleApp_Init, AdcInit
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1154,18 +1109,7 @@ SampleApp_Init:
         ARGFRAME XSTACK, 11, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL SampleApp_Init, Pwm_Init
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 11, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 11, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL SampleApp_Init, GpioCarrConfig
+        FUNCALL SampleApp_Init, InitFire
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 11, STACK
@@ -1284,10 +1228,10 @@ SampleApp_Init:
 //  177 
 //  178   //select the device to init 
 //  179   // #define BALCONY 1
-//  180   // #define KITCHEN 2
-//  181   #define BEDROOM 3
-//  182   // #define OUTDOOR 4
-//  183   // #define DOOR    5
+//  180 //   #define KITCHEN 2
+//  181 //#define BEDROOM 3
+//  182     #define OUTDOOR 4
+//  183 //   #define DOOR    5
 //  184 
 //  185   #ifdef BALCONY      
 //  186   deviceid=DEVICE1ID;                 
@@ -1313,9 +1257,6 @@ SampleApp_Init:
 //  206 
 //  207   #ifdef BEDROOM 
 //  208   deviceid=DEVICE3ID; 
-        MOV     DPTR,#deviceid
-        MOV     A,#0x3
-        MOVX    @DPTR,A
 //  209   #define SENSORTYPE1 DHT11
 //  210   #define SENSORTYPE2 LIGHTED
 //  211   #define SENSORTYPE11 LED_TYPE
@@ -1323,15 +1264,14 @@ SampleApp_Init:
 //  213   #define LIGHTED_ON 2
 //  214   #define LED_TYPE_ON 11
 //  215   MotorInit();
-        ; Setup parameters for call to function MotorInit
-        LCALL   ??MotorInit?relay
 //  216   StopMotor();
-        ; Setup parameters for call to function StopMotor
-        LCALL   ??StopMotor?relay
 //  217   #endif
 //  218 
 //  219   #ifdef OUTDOOR
 //  220   deviceid=DEVICE4ID; 
+        MOV     DPTR,#deviceid
+        MOV     A,#0x4
+        MOVX    @DPTR,A
 //  221   #define SENSORTYPE1 DHT11
 //  222   #define SENSORTYPE2 LIGHTED
 //  223   #define SENSORTYPE6 RAIN_TYPE
@@ -1369,6 +1309,8 @@ SampleApp_Init:
 //  252 
 //  253   #ifdef RAIN_TYPE_ON
 //  254   InitFire(); 
+        ; Setup parameters for call to function InitFire
+        LCALL   ??InitFire?relay
 //  255   #endif
 //  256 
 //  257   #ifdef FIRE_TYPE_ON
@@ -1389,12 +1331,7 @@ SampleApp_Init:
 //  272 
 //  273   #ifdef LED_TYPE_ON
 //  274   Pwm_Init();
-        ; Setup parameters for call to function Pwm_Init
-        LCALL   ??Pwm_Init?relay
 //  275   GpioCarrConfig(255);
-        ; Setup parameters for call to function GpioCarrConfig
-        MOV     R1,#-0x1
-        LCALL   ??GpioCarrConfig?relay
 //  276   #endif
 //  277 
 //  278   // Device hardware initialization can be added here or in main() (Zmain.c).
@@ -1687,6 +1624,17 @@ SampleApp_ProcessEvent:
         ARGFRAME XSTACK, 12, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL SampleApp_ProcessEvent, PrintSnesorData
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL SampleApp_ProcessEvent, Sample_SendPointToPointMessage
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1915,6 +1863,9 @@ SampleApp_ProcessEvent:
 //  426 
 //  427     #ifdef SENSORTYPE6
 //  428     PrintSnesorData(SENSORTYPE6); 
+        ; Setup parameters for call to function PrintSnesorData
+        MOV     R1,#0x6
+        LCALL   ??PrintSnesorData?relay
 //  429     #endif
 //  430 
 //  431     #ifdef SENSORTYPE7
@@ -5873,7 +5824,7 @@ DataEncode:
         END
 //  955 
 // 
-// 2 399 bytes in segment BANKED_CODE
+// 2 393 bytes in segment BANKED_CODE
 //    78 bytes in segment BANK_RELAYS
 //     2 bytes in segment SFR_AN
 //     1 byte  in segment XDATA_I
@@ -5881,7 +5832,7 @@ DataEncode:
 //    51 bytes in segment XDATA_ROM_C
 //   213 bytes in segment XDATA_Z
 // 
-// 2 478 bytes of CODE  memory
+// 2 472 bytes of CODE  memory
 //    51 bytes of CONST memory
 //     0 bytes of DATA  memory (+ 2 bytes shared)
 //   214 bytes of XDATA memory

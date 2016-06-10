@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         03/May/2016  09:54:04 #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         31/May/2016  19:53:13 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,16 +9,15 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\Source\SampleApp.c  #
-#    Command line       =  -f C:\Users\Administrator\Desktop\code\整合2\节点\ #
-#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
-#                          .\Tools\CC2530DB\f8wEndev.cfg (-DCPU32MHZ          #
-#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
-#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f          #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
-#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#    Source file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\Source\SampleApp.c                     #
+#    Command line       =  -f E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8 #
+#                          wEndev.cfg (-DCPU32MHZ -DROOT=__near_func          #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO       #
 #                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
 #                          -DDEFAULT_CHANLIST=0x00000800                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
@@ -41,94 +40,81 @@
 #                          __code" -DGENERIC=__generic                        #
 #                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
 #                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
-#                          -DREJOIN_POLL_RATE=440 C:\Users\Administrator\Desk #
-#                          top\code\整合2\节点\Projects\zstack\Samples\Sample #
-#                          App\Source\SampleApp.c -D NWK_AUTO_POLL -D         #
-#                          ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D            #
-#                          xMT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC            #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
-#                          B\List\ -lA C:\Users\Administrator\Desktop\code\整 #
-#                          合2\节点\Projects\zstack\Samples\SampleApp\CC2530D #
-#                          B\EndDeviceEB\List\ --diag_suppress Pe001,Pa010    #
-#                          -o C:\Users\Administrator\Desktop\code\整合2\节点\ #
-#                          Projects\zstack\Samples\SampleApp\CC2530DB\EndDevi #
-#                          ceEB\Obj\ -e --no_code_motion --debug              #
-#                          --core=plain --dptr=16,1 --data_model=large        #
-#                          --code_model=banked --calling_convention=xdata_ree #
-#                          ntrant --place_constants=data_rom                  #
-#                          --nr_virtual_regs 16 -I C:\Users\Administrator\Des #
-#                          ktop\code\整合2\节点\Projects\zstack\Samples\Sampl #
-#                          eApp\CC2530DB\ -I C:\Users\Administrator\Desktop\c #
-#                          ode\整合2\节点\Projects\zstack\Samples\SampleApp\C #
-#                          C2530DB\..\Source\ -I C:\Users\Administrator\Deskt #
-#                          op\code\整合2\节点\Projects\zstack\Samples\SampleA #
-#                          pp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I            #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\hal\include\ -I                    #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\hal\target\CC2530EB\ -I            #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\mac\include\ -I                    #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\mac\high_level\ -I                 #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\mac\low_level\srf04\ -I            #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\mac\low_level\srf04\single_chip\   #
-#                          -I C:\Users\Administrator\Desktop\code\整合2\节点\ #
+#                          -DREJOIN_POLL_RATE=440 E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\Source\SampleAp #
+#                          p.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK -D    #
+#                          xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                    #
+#                          LCD_SUPPORTED=DEBUG -lC E:\www\zigbee_for_smarthom #
+#                          e\Projects\zstack\Samples\SampleApp\CC2530DB\EndDe #
+#                          viceEB\List\ -lA E:\www\zigbee_for_smarthome\Proje #
+#                          cts\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\ #
+#                          List\ --diag_suppress Pe001,Pa010 -o               #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\ -e           #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\Source\ -I                 #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\hal #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\hal\target\CC2530EB\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\mac\high_level\ -I                       #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \low_level\srf04\ -I E:\www\zigbee_for_smarthome\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\low_level\srf04\single_chip\ #
+#                           -I E:\www\zigbee_for_smarthome\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mt\ -I E:\www\zigbee_for_smarthome\Projects\zstac #
+#                          k\Samples\SampleApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\osal\include\ -I E:\www\zigbee_for_smarthome\ #
 #                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
-#                          .\..\..\Components\mt\ -I                          #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\osal\include\ -I                   #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\services\saddr\ -I                 #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\services\sdata\ -I                 #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\af\ -I                       #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\nwk\ -I                      #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\sapi\ -I                     #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\sec\ -I                      #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\sys\ -I                      #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\stack\zdo\ -I                      #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\zmac\ -I                           #
-#                          C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
-#                          .\..\Components\zmac\f8w\ -Ohz                     #
-#    List file          =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
-#                          B\List\SampleApp.lst                               #
-#    Object file        =  C:\Users\Administrator\Desktop\code\整合2\节点\Pro #
-#                          jects\zstack\Samples\SampleApp\CC2530DB\EndDeviceE #
-#                          B\Obj\SampleApp.r51                                #
+#                          .\..\..\Components\services\saddr\ -I              #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\ser #
+#                          vices\sdata\ -I E:\www\zigbee_for_smarthome\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\nwk\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\sapi\ -I E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\..\..\Components\stack\sec\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\sys\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\zdo\ -I E:\www\zigbee_for_smarthome\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\zma #
+#                          c\f8w\ -Ohz                                        #
+#    List file          =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\List\SampleApp.ls #
+#                          t                                                  #
+#    Object file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\SampleApp.r51 #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp\Source\SampleApp.c
+E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\SampleApp.c
       1          /*********************************************************************
       2            This application isn't intended to do anything useful, it is
       3            intended to be a simple example of an application's structure.
@@ -189,7 +175,7 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
 
   #ifndef __BH1750_H__
                      ^
-"C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp\Source\bh1750.h",1  Warning[Pa050]: 
+"E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\bh1750.h",1  Warning[Pa050]: 
           non-native end of line sequence detected (this diagnostic is only
           issued once)
      48          #include "adc.h"
@@ -454,10 +440,10 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     177          
     178            //select the device to init 
     179            // #define BALCONY 1
-    180            // #define KITCHEN 2
-    181            #define BEDROOM 3
-    182            // #define OUTDOOR 4
-    183            // #define DOOR    5
+    180          //   #define KITCHEN 2
+    181          //#define BEDROOM 3
+    182              #define OUTDOOR 4
+    183          //   #define DOOR    5
     184          
     185            #ifdef BALCONY      
     186            deviceid=DEVICE1ID;                 
@@ -483,9 +469,6 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     206          
     207            #ifdef BEDROOM 
     208            deviceid=DEVICE3ID; 
-   \   00002E   90....       MOV     DPTR,#deviceid
-   \   000031   7403         MOV     A,#0x3
-   \   000033   F0           MOVX    @DPTR,A
     209            #define SENSORTYPE1 DHT11
     210            #define SENSORTYPE2 LIGHTED
     211            #define SENSORTYPE11 LED_TYPE
@@ -493,15 +476,14 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     213            #define LIGHTED_ON 2
     214            #define LED_TYPE_ON 11
     215            MotorInit();
-   \   000034                ; Setup parameters for call to function MotorInit
-   \   000034   12....       LCALL   ??MotorInit?relay
     216            StopMotor();
-   \   000037                ; Setup parameters for call to function StopMotor
-   \   000037   12....       LCALL   ??StopMotor?relay
     217            #endif
     218          
     219            #ifdef OUTDOOR
     220            deviceid=DEVICE4ID; 
+   \   00002E   90....       MOV     DPTR,#deviceid
+   \   000031   7404         MOV     A,#0x4
+   \   000033   F0           MOVX    @DPTR,A
     221            #define SENSORTYPE1 DHT11
     222            #define SENSORTYPE2 LIGHTED
     223            #define SENSORTYPE6 RAIN_TYPE
@@ -520,13 +502,13 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     236          
     237            #ifdef DHT11_ON
     238            P0SEL &=0xef;//dht11 init  
-   \   00003A   53F3EF       ANL     0xf3,#0xef
+   \   000034   53F3EF       ANL     0xf3,#0xef
     239            #endif
     240          
     241            #ifdef LIGHTED_ON
     242            AdcInit();
-   \   00003D                ; Setup parameters for call to function AdcInit
-   \   00003D   12....       LCALL   ??AdcInit?relay
+   \   000037                ; Setup parameters for call to function AdcInit
+   \   000037   12....       LCALL   ??AdcInit?relay
     243            #endif
     244          
     245            #ifdef DS18B20_ON
@@ -539,6 +521,8 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     252          
     253            #ifdef RAIN_TYPE_ON
     254            InitFire(); 
+   \   00003A                ; Setup parameters for call to function InitFire
+   \   00003A   12....       LCALL   ??InitFire?relay
     255            #endif
     256          
     257            #ifdef FIRE_TYPE_ON
@@ -559,12 +543,7 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     272          
     273            #ifdef LED_TYPE_ON
     274            Pwm_Init();
-   \   000040                ; Setup parameters for call to function Pwm_Init
-   \   000040   12....       LCALL   ??Pwm_Init?relay
     275            GpioCarrConfig(255);
-   \   000043                ; Setup parameters for call to function GpioCarrConfig
-   \   000043   79FF         MOV     R1,#-0x1
-   \   000045   12....       LCALL   ??GpioCarrConfig?relay
     276            #endif
     277          
     278            // Device hardware initialization can be added here or in main() (Zmain.c).
@@ -592,126 +571,126 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     300            // Setup for the periodic message's destination address
     301            // Broadcast to everyone
     302            SampleApp_Periodic_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;
-   \   000048   90....       MOV     DPTR,#SampleApp_Periodic_DstAddr + 8
-   \   00004B   740F         MOV     A,#0xf
-   \   00004D   F0           MOVX    @DPTR,A
+   \   00003D   90....       MOV     DPTR,#SampleApp_Periodic_DstAddr + 8
+   \   000040   740F         MOV     A,#0xf
+   \   000042   F0           MOVX    @DPTR,A
     303            SampleApp_Periodic_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
-   \   00004E   A3           INC     DPTR
-   \   00004F   7414         MOV     A,#0x14
-   \   000051   F0           MOVX    @DPTR,A
+   \   000043   A3           INC     DPTR
+   \   000044   7414         MOV     A,#0x14
+   \   000046   F0           MOVX    @DPTR,A
     304            SampleApp_Periodic_DstAddr.addr.shortAddr = 0xFFFF;
-   \   000052   90....       MOV     DPTR,#SampleApp_Periodic_DstAddr
-   \   000055   74FF         MOV     A,#-0x1
-   \   000057   F0           MOVX    @DPTR,A
-   \   000058   A3           INC     DPTR
-   \   000059   F0           MOVX    @DPTR,A
+   \   000047   90....       MOV     DPTR,#SampleApp_Periodic_DstAddr
+   \   00004A   74FF         MOV     A,#-0x1
+   \   00004C   F0           MOVX    @DPTR,A
+   \   00004D   A3           INC     DPTR
+   \   00004E   F0           MOVX    @DPTR,A
     305          
     306            // Setup for the flash command's destination address - Group 1
     307            SampleApp_Flash_DstAddr.addrMode = (afAddrMode_t)afAddrGroup;
-   \   00005A   90....       MOV     DPTR,#SampleApp_Flash_DstAddr + 8
-   \   00005D   7401         MOV     A,#0x1
-   \   00005F   F0           MOVX    @DPTR,A
+   \   00004F   90....       MOV     DPTR,#SampleApp_Flash_DstAddr + 8
+   \   000052   7401         MOV     A,#0x1
+   \   000054   F0           MOVX    @DPTR,A
     308            SampleApp_Flash_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
-   \   000060   A3           INC     DPTR
-   \   000061   7414         MOV     A,#0x14
-   \   000063   F0           MOVX    @DPTR,A
+   \   000055   A3           INC     DPTR
+   \   000056   7414         MOV     A,#0x14
+   \   000058   F0           MOVX    @DPTR,A
     309            SampleApp_Flash_DstAddr.addr.shortAddr = SAMPLEAPP_FLASH_GROUP;
-   \   000064   90....       MOV     DPTR,#SampleApp_Flash_DstAddr
-   \   000067   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \   000059   90....       MOV     DPTR,#SampleApp_Flash_DstAddr
+   \   00005C   12....       LCALL   ?Subroutine7 & 0xFFFF
     310          
     311            //Setup for the Point to Point message's destination address
     312            Point_To_Point_DstAddr.addrMode=(afAddrMode_t)Addr16Bit;
    \                     ??CrossCallReturnLabel_45:
-   \   00006A   90....       MOV     DPTR,#Point_To_Point_DstAddr + 8
-   \   00006D   7402         MOV     A,#0x2
-   \   00006F   F0           MOVX    @DPTR,A
+   \   00005F   90....       MOV     DPTR,#Point_To_Point_DstAddr + 8
+   \   000062   7402         MOV     A,#0x2
+   \   000064   F0           MOVX    @DPTR,A
     313            Point_To_Point_DstAddr.endPoint=SAMPLEAPP_ENDPOINT;
-   \   000070   A3           INC     DPTR
-   \   000071   7414         MOV     A,#0x14
-   \   000073   F0           MOVX    @DPTR,A
+   \   000065   A3           INC     DPTR
+   \   000066   7414         MOV     A,#0x14
+   \   000068   F0           MOVX    @DPTR,A
     314            Point_To_Point_DstAddr.addr.shortAddr=0x0000;
-   \   000074   90....       MOV     DPTR,#Point_To_Point_DstAddr
-   \   000077   E4           CLR     A
-   \   000078   F0           MOVX    @DPTR,A
-   \   000079   A3           INC     DPTR
-   \   00007A   F0           MOVX    @DPTR,A
+   \   000069   90....       MOV     DPTR,#Point_To_Point_DstAddr
+   \   00006C   E4           CLR     A
+   \   00006D   F0           MOVX    @DPTR,A
+   \   00006E   A3           INC     DPTR
+   \   00006F   F0           MOVX    @DPTR,A
     315          
     316            // Fill out the endpoint description.
     317            SampleApp_epDesc.endPoint = SAMPLEAPP_ENDPOINT;
-   \   00007B   90....       MOV     DPTR,#SampleApp_epDesc
-   \   00007E   7414         MOV     A,#0x14
-   \   000080   F0           MOVX    @DPTR,A
+   \   000070   90....       MOV     DPTR,#SampleApp_epDesc
+   \   000073   7414         MOV     A,#0x14
+   \   000075   F0           MOVX    @DPTR,A
     318            SampleApp_epDesc.task_id = &SampleApp_TaskID;
-   \   000081   A3           INC     DPTR
-   \   000082   74..         MOV     A,#SampleApp_TaskID & 0xff
-   \   000084   F0           MOVX    @DPTR,A
-   \   000085   A3           INC     DPTR
-   \   000086   74..         MOV     A,#(SampleApp_TaskID >> 8) & 0xff
-   \   000088   F0           MOVX    @DPTR,A
+   \   000076   A3           INC     DPTR
+   \   000077   74..         MOV     A,#SampleApp_TaskID & 0xff
+   \   000079   F0           MOVX    @DPTR,A
+   \   00007A   A3           INC     DPTR
+   \   00007B   74..         MOV     A,#(SampleApp_TaskID >> 8) & 0xff
+   \   00007D   F0           MOVX    @DPTR,A
     319            SampleApp_epDesc.simpleDesc
     320                      = (SimpleDescriptionFormat_t *)&SampleApp_SimpleDesc;
-   \   000089   A3           INC     DPTR
-   \   00008A   74..         MOV     A,#SampleApp_SimpleDesc & 0xff
-   \   00008C   F0           MOVX    @DPTR,A
-   \   00008D   A3           INC     DPTR
-   \   00008E   74..         MOV     A,#(SampleApp_SimpleDesc >> 8) & 0xff
-   \   000090   12....       LCALL   ??Subroutine24_0 & 0xFFFF
+   \   00007E   A3           INC     DPTR
+   \   00007F   74..         MOV     A,#SampleApp_SimpleDesc & 0xff
+   \   000081   F0           MOVX    @DPTR,A
+   \   000082   A3           INC     DPTR
+   \   000083   74..         MOV     A,#(SampleApp_SimpleDesc >> 8) & 0xff
+   \   000085   12....       LCALL   ??Subroutine24_0 & 0xFFFF
     321            SampleApp_epDesc.latencyReq = noLatencyReqs;
     322          
     323            // Register the endpoint description with the AF
     324            afRegister( &SampleApp_epDesc );
    \                     ??CrossCallReturnLabel_38:
-   \   000093                ; Setup parameters for call to function afRegister
-   \   000093   7A..         MOV     R2,#SampleApp_epDesc & 0xff
-   \   000095   7B..         MOV     R3,#(SampleApp_epDesc >> 8) & 0xff
-   \   000097   12....       LCALL   ??afRegister?relay
+   \   000088                ; Setup parameters for call to function afRegister
+   \   000088   7A..         MOV     R2,#SampleApp_epDesc & 0xff
+   \   00008A   7B..         MOV     R3,#(SampleApp_epDesc >> 8) & 0xff
+   \   00008C   12....       LCALL   ??afRegister?relay
     325          
     326            // Register for all key events - This app will handle all key events
     327            RegisterForKeys( SampleApp_TaskID );
-   \   00009A                ; Setup parameters for call to function RegisterForKeys
-   \   00009A   90....       MOV     DPTR,#SampleApp_TaskID
-   \   00009D   E0           MOVX    A,@DPTR
-   \   00009E   F9           MOV     R1,A
-   \   00009F   12....       LCALL   ??RegisterForKeys?relay
+   \   00008F                ; Setup parameters for call to function RegisterForKeys
+   \   00008F   90....       MOV     DPTR,#SampleApp_TaskID
+   \   000092   E0           MOVX    A,@DPTR
+   \   000093   F9           MOV     R1,A
+   \   000094   12....       LCALL   ??RegisterForKeys?relay
     328          
     329            // By default, all devices start out in Group 1
     330            SampleApp_Group.ID = 0x0001;
-   \   0000A2   90....       MOV     DPTR,#SampleApp_Group
-   \   0000A5   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \   000097   90....       MOV     DPTR,#SampleApp_Group
+   \   00009A   12....       LCALL   ?Subroutine7 & 0xFFFF
     331            osal_memcpy( SampleApp_Group.name, "Group 1", 7  );
    \                     ??CrossCallReturnLabel_46:
-   \   0000A8                ; Setup parameters for call to function osal_memcpy
-   \   0000A8   75....       MOV     ?V0 + 0,#`?<Constant "Group 1">` & 0xff
-   \   0000AB   75....       MOV     ?V0 + 1,#(`?<Constant "Group 1">` >> 8) & 0xff
-   \   0000AE   F5..         MOV     ?V0 + 2,A
-   \   0000B0   78..         MOV     R0,#?V0 + 0
-   \   0000B2   12....       LCALL   ?PUSH_XSTACK_I_THREE
-   \   0000B5   7C07         MOV     R4,#0x7
-   \   0000B7   7D00         MOV     R5,#0x0
-   \   0000B9   7A..         MOV     R2,#(SampleApp_Group + 2) & 0xff
-   \   0000BB   7B..         MOV     R3,#((SampleApp_Group + 2) >> 8) & 0xff
-   \   0000BD   12....       LCALL   ??osal_memcpy?relay
-   \   0000C0   7403         MOV     A,#0x3
-   \   0000C2   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00009D                ; Setup parameters for call to function osal_memcpy
+   \   00009D   75....       MOV     ?V0 + 0,#`?<Constant "Group 1">` & 0xff
+   \   0000A0   75....       MOV     ?V0 + 1,#(`?<Constant "Group 1">` >> 8) & 0xff
+   \   0000A3   F5..         MOV     ?V0 + 2,A
+   \   0000A5   78..         MOV     R0,#?V0 + 0
+   \   0000A7   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   0000AA   7C07         MOV     R4,#0x7
+   \   0000AC   7D00         MOV     R5,#0x0
+   \   0000AE   7A..         MOV     R2,#(SampleApp_Group + 2) & 0xff
+   \   0000B0   7B..         MOV     R3,#((SampleApp_Group + 2) >> 8) & 0xff
+   \   0000B2   12....       LCALL   ??osal_memcpy?relay
+   \   0000B5   7403         MOV     A,#0x3
+   \   0000B7   12....       LCALL   ?DEALLOC_XSTACK8
     332            aps_AddGroup( SAMPLEAPP_ENDPOINT, &SampleApp_Group );
-   \   0000C5                ; Setup parameters for call to function aps_AddGroup
-   \   0000C5   7A..         MOV     R2,#SampleApp_Group & 0xff
-   \   0000C7   7B..         MOV     R3,#(SampleApp_Group >> 8) & 0xff
-   \   0000C9   7914         MOV     R1,#0x14
-   \   0000CB   12....       LCALL   ??aps_AddGroup?relay
+   \   0000BA                ; Setup parameters for call to function aps_AddGroup
+   \   0000BA   7A..         MOV     R2,#SampleApp_Group & 0xff
+   \   0000BC   7B..         MOV     R3,#(SampleApp_Group >> 8) & 0xff
+   \   0000BE   7914         MOV     R1,#0x14
+   \   0000C0   12....       LCALL   ??aps_AddGroup?relay
     333          
     334          #if defined ( LCD_SUPPORTED )
     335            HalLcdWriteString( "SampleApp", HAL_LCD_LINE_1 );
-   \   0000CE                ; Setup parameters for call to function HalLcdWriteString
-   \   0000CE   7901         MOV     R1,#0x1
-   \   0000D0   7A..         MOV     R2,#`?<Constant "SampleApp">` & 0xff
-   \   0000D2   7B..         MOV     R3,#(`?<Constant "SampleApp">` >> 8) & 0xff
-   \   0000D4   12....       LCALL   ??HalLcdWriteString?relay
+   \   0000C3                ; Setup parameters for call to function HalLcdWriteString
+   \   0000C3   7901         MOV     R1,#0x1
+   \   0000C5   7A..         MOV     R2,#`?<Constant "SampleApp">` & 0xff
+   \   0000C7   7B..         MOV     R3,#(`?<Constant "SampleApp">` >> 8) & 0xff
+   \   0000C9   12....       LCALL   ??HalLcdWriteString?relay
     336          #endif
     337          }
-   \   0000D7                REQUIRE ?Subroutine0
-   \   0000D7                REQUIRE P0SEL
-   \   0000D7                ; // Fall through to label ?Subroutine0
+   \   0000CC                REQUIRE ?Subroutine0
+   \   0000CC                REQUIRE P0SEL
+   \   0000CC                ; // Fall through to label ?Subroutine0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine0:
@@ -900,7 +879,7 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
    \   00008B   6480         XRL     A,#0x80
    \                     ??SampleApp_ProcessEvent_9:
    \   00008D   FB           MOV     R3,A
-   \   00008E   8034         SJMP    ??SampleApp_ProcessEvent_10
+   \   00008E   8039         SJMP    ??SampleApp_ProcessEvent_10
     409            }
     410          
     411            // Send a message out - This event is generated by a timer
@@ -909,7 +888,7 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
    \                     ??SampleApp_ProcessEvent_0:
    \   000090   EE           MOV     A,R6
    \   000091   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000093   502B         JNC     ??SampleApp_ProcessEvent_11
+   \   000093   5030         JNC     ??SampleApp_ProcessEvent_11
     414            {
     415              #ifdef SENSORTYPE1
     416              PrintSnesorData(SENSORTYPE1); 
@@ -931,6 +910,9 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     426          
     427              #ifdef SENSORTYPE6
     428              PrintSnesorData(SENSORTYPE6); 
+   \   00009F                ; Setup parameters for call to function PrintSnesorData
+   \   00009F   7906         MOV     R1,#0x6
+   \   0000A1   12....       LCALL   ??PrintSnesorData?relay
     429              #endif
     430          
     431              #ifdef SENSORTYPE7
@@ -953,44 +935,44 @@ C:\Users\Administrator\Desktop\code\整合2\节点\Projects\zstack\Samples\SampleApp
     448          
     449              // Send the PointToPoin message
     450              Sample_SendPointToPointMessage();
-   \   00009F                ; Setup parameters for call to function Sample_SendPointToPointMessage
-   \   00009F   12....       LCALL   ??Sample_SendPointToPointMessage?relay
+   \   0000A4                ; Setup parameters for call to function Sample_SendPointToPointMessage
+   \   0000A4   12....       LCALL   ??Sample_SendPointToPointMessage?relay
     451          
     452              // Setup to send message again in normal period (+ a little jitter)
     453              osal_start_timerEx( SampleApp_TaskID, SAMPLEAPP_SEND_PERIODIC_MSG_EVT,
     454                  (SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT + (osal_rand() & 0x00FF)) );
-   \   0000A2                ; Setup parameters for call to function osal_rand
-   \   0000A2   12....       LCALL   ??osal_rand?relay
-   \   0000A5                ; Setup parameters for call to function osal_start_timerEx
-   \   0000A5   EA           MOV     A,R2
-   \   0000A6   24E8         ADD     A,#-0x18
-   \   0000A8   FC           MOV     R4,A
-   \   0000A9   E4           CLR     A
-   \   0000AA   3403         ADDC    A,#0x3
-   \   0000AC   FD           MOV     R5,A
-   \   0000AD   7A01         MOV     R2,#0x1
-   \   0000AF   7B00         MOV     R3,#0x0
-   \   0000B1   90....       MOV     DPTR,#SampleApp_TaskID
-   \   0000B4   E0           MOVX    A,@DPTR
-   \   0000B5   F9           MOV     R1,A
-   \   0000B6   12....       LCALL   ??osal_start_timerEx?relay
+   \   0000A7                ; Setup parameters for call to function osal_rand
+   \   0000A7   12....       LCALL   ??osal_rand?relay
+   \   0000AA                ; Setup parameters for call to function osal_start_timerEx
+   \   0000AA   EA           MOV     A,R2
+   \   0000AB   24E8         ADD     A,#-0x18
+   \   0000AD   FC           MOV     R4,A
+   \   0000AE   E4           CLR     A
+   \   0000AF   3403         ADDC    A,#0x3
+   \   0000B1   FD           MOV     R5,A
+   \   0000B2   7A01         MOV     R2,#0x1
+   \   0000B4   7B00         MOV     R3,#0x0
+   \   0000B6   90....       MOV     DPTR,#SampleApp_TaskID
+   \   0000B9   E0           MOVX    A,@DPTR
+   \   0000BA   F9           MOV     R1,A
+   \   0000BB   12....       LCALL   ??osal_start_timerEx?relay
     455          
     456              // return unprocessed events
     457              return (events ^ SAMPLEAPP_SEND_PERIODIC_MSG_EVT);
-   \   0000B9   EE           MOV     A,R6
-   \   0000BA   6401         XRL     A,#0x1
-   \   0000BC   FA           MOV     R2,A
-   \   0000BD   EF           MOV     A,R7
-   \   0000BE   80CD         SJMP    ??SampleApp_ProcessEvent_9
+   \   0000BE   EE           MOV     A,R6
+   \   0000BF   6401         XRL     A,#0x1
+   \   0000C1   FA           MOV     R2,A
+   \   0000C2   EF           MOV     A,R7
+   \   0000C3   80C8         SJMP    ??SampleApp_ProcessEvent_9
     458            }
     459          
     460            // Discard unknown events
     461            return 0;
    \                     ??SampleApp_ProcessEvent_11:
-   \   0000C0   7A00         MOV     R2,#0x0
-   \   0000C2   7B00         MOV     R3,#0x0
+   \   0000C5   7A00         MOV     R2,#0x0
+   \   0000C7   7B00         MOV     R3,#0x0
    \                     ??SampleApp_ProcessEvent_10:
-   \   0000C4   02....       LJMP    ??Subroutine22_0 & 0xFFFF
+   \   0000C9   02....       LJMP    ??Subroutine22_0 & 0xFFFF
     462          }
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
@@ -2963,11 +2945,8 @@ Warning[Pe167]: argument of type "char *" is incompatible with parameter of
        -> MT_UartRegisterTaskID         0      0     22
        -> HalUARTWrite                  0      0     22
        -> AdcInit                       0      0     22
-       -> MotorInit                     0      0     22
-       -> StopMotor                     0      0     22
        -> AdcInit                       0      0     22
-       -> Pwm_Init                      0      0     22
-       -> GpioCarrConfig                0      0     22
+       -> InitFire                      0      0     22
        -> afRegister                    0      0     22
        -> RegisterForKeys               0      0     22
        -> osal_memcpy                   0      0     28
@@ -2989,6 +2968,7 @@ Warning[Pe167]: argument of type "char *" is incompatible with parameter of
        -> SampleApp_SerialCMD           0      0     24
        -> SampleApp_HandleKeys          0      0     24
        -> SampleApp_MessageMSGCB        0      0     24
+       -> PrintSnesorData               0      0     24
        -> PrintSnesorData               0      0     24
        -> PrintSnesorData               0      0     24
        -> Sample_SendPointToPointMessage
@@ -3032,11 +3012,11 @@ Warning[Pe167]: argument of type "char *" is incompatible with parameter of
      data_to_send                             50
      SerData                                  72
      ControlMode                               1
-     SampleApp_Init                          215
+     SampleApp_Init                          204
      ?Subroutine0                              5
      ?Subroutine7                              2
      ??Subroutine24_0                          5
-     SampleApp_ProcessEvent                  199
+     SampleApp_ProcessEvent                  204
      ??Subroutine22_0                          5
      SampleApp_HandleKeys                     62
      ??Subroutine21_0                          5
@@ -3094,7 +3074,7 @@ Warning[Pe167]: argument of type "char *" is incompatible with parameter of
      ?<Constant "SampleApp">                  10
 
  
- 2 399 bytes in segment BANKED_CODE
+ 2 393 bytes in segment BANKED_CODE
     78 bytes in segment BANK_RELAYS
      2 bytes in segment SFR_AN
      1 byte  in segment XDATA_I
@@ -3102,7 +3082,7 @@ Warning[Pe167]: argument of type "char *" is incompatible with parameter of
     51 bytes in segment XDATA_ROM_C
    213 bytes in segment XDATA_Z
  
- 2 478 bytes of CODE  memory
+ 2 472 bytes of CODE  memory
     51 bytes of CONST memory
      0 bytes of DATA  memory (+ 2 bytes shared)
    214 bytes of XDATA memory

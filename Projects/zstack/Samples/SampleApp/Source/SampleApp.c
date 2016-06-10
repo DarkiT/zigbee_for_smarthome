@@ -177,10 +177,10 @@ void SampleApp_Init( uint8 task_id )
 
   //select the device to init 
   // #define BALCONY 1
-  // #define KITCHEN 2
-  #define BEDROOM 3
-  // #define OUTDOOR 4
-  // #define DOOR    5
+//   #define KITCHEN 2
+//#define BEDROOM 3
+    #define OUTDOOR 4
+//   #define DOOR    5
 
   #ifdef BALCONY      
   deviceid=DEVICE1ID;                 

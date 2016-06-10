@@ -1,0 +1,369 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         30/May/2016  21:21:28 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\Source\timer.c                         #
+#    Command line       =  -f E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8 #
+#                          wEndev.cfg (-DCPU32MHZ -DROOT=__near_func          #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO       #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\Source\timer.c  #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D xMT_TASK -D        #
+#                          xMT_SYS_FUNC -D xMT_ZDO_FUNC -D                    #
+#                          LCD_SUPPORTED=DEBUG -lC E:\www\zigbee_for_smarthom #
+#                          e\Projects\zstack\Samples\SampleApp\CC2530DB\EndDe #
+#                          viceEB\List\ -lA E:\www\zigbee_for_smarthome\Proje #
+#                          cts\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\ #
+#                          List\ --diag_suppress Pe001,Pa010 -o               #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\ -e           #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\www\zigbee_for_smarthome\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\Source\ -I                 #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\ -I   #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\hal #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\hal\target\CC2530EB\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \include\ -I E:\www\zigbee_for_smarthome\Projects\ #
+#                          zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\C #
+#                          omponents\mac\high_level\ -I                       #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\mac #
+#                          \low_level\srf04\ -I E:\www\zigbee_for_smarthome\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\low_level\srf04\single_chip\ #
+#                           -I E:\www\zigbee_for_smarthome\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mt\ -I E:\www\zigbee_for_smarthome\Projects\zstac #
+#                          k\Samples\SampleApp\CC2530DB\..\..\..\..\..\Compon #
+#                          ents\osal\include\ -I E:\www\zigbee_for_smarthome\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\services\saddr\ -I              #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\ser #
+#                          vices\sdata\ -I E:\www\zigbee_for_smarthome\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\nwk\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\sapi\ -I E:\www\zigbee_for_smarthome #
+#                          \Projects\zstack\Samples\SampleApp\CC2530DB\..\..\ #
+#                          ..\..\..\Components\stack\sec\ -I                  #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\sta #
+#                          ck\sys\ -I E:\www\zigbee_for_smarthome\Projects\zs #
+#                          tack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Com #
+#                          ponents\stack\zdo\ -I E:\www\zigbee_for_smarthome\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\..\..\Components\zmac\ -I                        #
+#                          E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\Components\zma #
+#                          c\f8w\ -Ohz                                        #
+#    List file          =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\List\timer.lst    #
+#    Object file        =  E:\www\zigbee_for_smarthome\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\EndDeviceEB\Obj\timer.r51     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\timer.c
+      1          #include "timer.h"
+
+  #ifndef __TIMER_H_
+                   ^
+"E:\www\zigbee_for_smarthome\Projects\zstack\Samples\SampleApp\Source\timer.h",1  Warning[Pa050]: 
+          non-native end of line sequence detected (this diagnostic is only
+          issued once)
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb8
+   \   union <unnamed> volatile __sfr _A_IEN1
+   \                     _A_IEN1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc0
+   \   union <unnamed> volatile __sfr _A_IRCON
+   \                     _A_IRCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xcb
+   \   unsigned char volatile __sfr T3CTL
+   \                     T3CTL:
+   \   000000                DS 1
+      2          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      3          static int count = 0;
+   \                     count:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+      4          static int couter = 0;
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      5          static int v = 0;
+   \                     v:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      6          int StepMotorTurnMode = 1;
+   \                     StepMotorTurnMode:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for StepMotorTurnMode>`
+   \   000002                REQUIRE __INIT_XDATA_I
+      7          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      8          void InitT3()
+   \                     InitT3:
+      9          {     
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     10            T3CTL |= 0x08 ;            
+   \   000000   43CB08       ORL     0xcb,#0x8
+     11            T3IE = 1;                 
+   \   000003   D2BB         SETB    0xb8.3
+     12            T3CTL|=0XE0;               
+   \   000005   43CBE0       ORL     0xcb,#0xe0
+     13            T3CTL &= ~0X03;            
+   \   000008   53CBFC       ANL     0xcb,#0xfc
+     14            T3CTL |=0X10;              
+   \   00000B   43CB10       ORL     0xcb,#0x10
+     15            EA = 1; 
+   \   00000E   D2AF         SETB    0xa8.7
+     16          }
+   \   000010   02....       LJMP    ?BRET
+   \   000013                REQUIRE T3CTL
+   \   000013                REQUIRE _A_IEN1
+   \   000013                REQUIRE _A_IEN0
+     17          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     18          void TimerInit()
+   \                     TimerInit:
+     19          {   
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     20            InitT3();        
+   \   000004                ; Setup parameters for call to function InitT3
+   \   000004   12....       LCALL   ??InitT3?relay
+     21          }
+   \   000007   D083         POP     DPH
+   \   000009   D082         POP     DPL
+   \   00000B   02....       LJMP    ?BRET
+     22          
+     23          #pragma vector = T3_VECTOR 
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+     24           __interrupt void T3_ISR(void) 
+   \                     T3_ISR:
+     25           { 
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   C082         PUSH    DPL
+   \   000006   C083         PUSH    DPH
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+     26              IRCON = 0x00;                  
+   \   000008   75C000       MOV     0xc0,#0x0
+     27              if(++count>254)               
+   \   00000B   90....       MOV     DPTR,#count
+   \   00000E   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000011   90....       MOV     DPTR,#count
+   \   000014   C3           CLR     C
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   94FF         SUBB    A,#-0x1
+   \   000018   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_2:
+   \   00001B   4007         JC      ??T3_ISR_0
+     28              {          
+     29                count = 0;                   
+   \   00001D   90....       MOV     DPTR,#count
+   \   000020   E4           CLR     A
+   \   000021   F0           MOVX    @DPTR,A
+   \   000022   A3           INC     DPTR
+   \   000023   F0           MOVX    @DPTR,A
+     30              } 
+     31          
+     32              v++;
+   \                     ??T3_ISR_0:
+   \   000024   90....       MOV     DPTR,#v
+   \   000027   12....       LCALL   ?Subroutine0
+     33              if(v > 1)//5
+   \                     ??CrossCallReturnLabel_1:
+   \   00002A   90....       MOV     DPTR,#v
+   \   00002D   C3           CLR     C
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   9402         SUBB    A,#0x2
+   \   000031   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_3:
+   \   000034   4007         JC      ??T3_ISR_1
+     34                  v = 0;
+   \   000036   90....       MOV     DPTR,#v
+   \   000039   E4           CLR     A
+   \   00003A   F0           MOVX    @DPTR,A
+   \   00003B   A3           INC     DPTR
+   \   00003C   F0           MOVX    @DPTR,A
+     35          
+     36              if(v == 3)
+     37              {
+     38                  couter ++;
+     39                  if(couter > 3)
+     40                      couter = 0;
+     41                  StepMotorTurn(StepMotorTurnMode,couter);
+     42              }
+     43           }
+   \                     ??T3_ISR_1:
+   \   00003D   D083         POP     DPH
+   \   00003F   D082         POP     DPL
+   \   000041   D0D0         POP     PSW
+   \   000043   D0E0         POP     A
+   \   000045   32           RETI
+   \   000046                REQUIRE _A_IRCON
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   A3           INC     DPTR
+   \   000001   E0           MOVX    A,@DPTR
+   \   000002   9400         SUBB    A,#0x0
+   \   000004   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   000006   65D0         XRL     A,PSW
+   \   000008   33           RLC     A
+   \   000009   22           RET
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   2401         ADD     A,#0x1
+   \   000003   F0           MOVX    @DPTR,A
+   \   000004   A3           INC     DPTR
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   3400         ADDC    A,#0x0
+   \   000008   F0           MOVX    @DPTR,A
+   \   000009   22           RET
+
+   \                                 In  segment INTVEC, offset 0x5b, root
+   \                     `??T3_ISR??INTVEC 91`:
+   \   00005B   02....       LJMP       (T3_ISR)
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for StepMotorTurnMode>`:
+   \   000000   0100         DW 1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitT3?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitT3
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??TimerInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    TimerInit
+     44          
+
+   Maximum stack usage in bytes:
+
+     Function    ISTACK PSTACK XSTACK
+     --------    ------ ------ ------
+     InitT3          0      0      0
+     T3_ISR          4      0      0
+     TimerInit       2      0      0
+       -> InitT3     4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                       Bytes
+     --------------                       -----
+     _A_IEN0                                 1
+     _A_IEN1                                 1
+     _A_IRCON                                1
+     T3CTL                                   1
+     count                                   2
+     couter                                  2
+     v                                       2
+     StepMotorTurnMode                       2
+     InitT3                                 19
+     TimerInit                              14
+     T3_ISR                                 70
+     ?Subroutine1                           10
+     ?Subroutine0                           10
+     ??T3_ISR??INTVEC 91                     3
+     ?<Initializer for StepMotorTurnMode>    2
+     ??InitT3?relay                          6
+     ??TimerInit?relay                       6
+
+ 
+ 33 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  3 bytes in segment INTVEC
+ 90 bytes in segment NEAR_CODE
+  4 bytes in segment SFR_AN
+  2 bytes in segment XDATA_I
+  2 bytes in segment XDATA_ID
+  6 bytes in segment XDATA_Z
+ 
+ 137 bytes of CODE  memory (+ 3 bytes shared)
+   0 bytes of DATA  memory (+ 4 bytes shared)
+   8 bytes of XDATA memory
+
+Errors: none
+Warnings: 1
